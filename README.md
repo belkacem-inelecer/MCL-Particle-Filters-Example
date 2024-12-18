@@ -1,6 +1,3 @@
-Certainly! Here's a detailed `README.md` file that explains the contents of your notebook. This will help other users understand the purpose, usage, and key components of your Particle Filter implementation.
-
----
 
 # Particle Filter for Robot Localization
 
@@ -125,6 +122,3 @@ Contributions are welcome! If you find any issues or have suggestions for improv
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
----
-
-Feel free to modify the content based on your specific needs or changes made to the notebook. This `README.md` provides a detailed walkthrough of the notebook's steps, explaining both the theory and the implementation of the particle filter for localization.
