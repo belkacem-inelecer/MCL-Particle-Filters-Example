@@ -1,4 +1,3 @@
-
 # Particle Filter for Robot Localization
 
 This repository contains a Python implementation of a **Particle Filter** applied to **robot localization** in a 2D space. It provides an example of **Monte Carlo Localization** (MCL) using a particle filter, where the robot tries to estimate its position based on noisy sensor measurements and motion information.
@@ -22,6 +21,7 @@ The notebook walks through the following steps:
   - [Prediction with a Motion Model](#predict-with-a-motion-model)
   - [Resampling](#resample-to-get-unweighted-samples-again)
   - [Recurse: Update with a New Measurement](#recurse-update-with-a-new-measurement)
+- [Visualization of Results](#visualization-of-results)
 - [Dependencies](#dependencies)
 - [Contributing](#contributing)
 - [License](#license)
@@ -72,7 +72,7 @@ Once the setup is complete, open the notebook `particle_filter_localization.ipyn
 - **Update with measurements**: When a sensor measurement (position) is available, the particles are weighted based on their likelihood given the measurement.
 - **Prediction**: The particles are then moved using a simple motion model (in this case, circular movement).
 - **Resampling**: To focus on the more probable particles, resampling is performed based on the weights.
-- **Recurse**: The filter process repeats, constantly refining the robot's localization.
+- **Recurse**: The filter process repeats, constantly refining the robot’s localization.
 
 ---
 
@@ -92,6 +92,20 @@ After updating the particles’ positions based on the motion model, the particl
 
 ### Recurse: Update with a New Measurement
 As new measurements are taken, the particle filter repeats the update, prediction, and resampling steps. Each new measurement refines the robot’s estimated position, and the particles converge to the correct location.
+
+---
+
+## Visualization of Results
+
+### Initial Distribution
+Below is the initial scatter plot representing **prior knowledge** about the robot's location. Each dot represents a particle sampled from a Gaussian distribution centered at the origin with wide variance.
+
+![Initial Distribution](https://github.com/user-attachments/assets/1a7b0b7d-0ca9-44d1-974f-729c3128abcf)
+
+### Weighted Samples After Posterior Update
+After incorporating sensor measurements and updating the particle weights, the distribution of particles narrows. The larger dots in the scatter plot below represent particles with higher weights, indicating the robot's probable location after two measurement updates.
+
+![Posterior Weighted Samples](https://github.com/user-attachments/assets/2eeccea5-540f-49cd-8033-d8afdd7c61ae)
 
 ---
 
